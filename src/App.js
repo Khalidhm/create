@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
-  return (
+import { Component } from 'react';
+import './App.css';
+import { render } from '@testing-library/react';
+import Board from './components/board';
+import 'bootstrap/dist/css/bootstrap.css';
+import 'font-awesome/css/font-awesome.css';
+
+
+class App extends Component {
+  render(){
+    return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      
+      <h1>KhAliD'S MeMe SoUnDbOaRd</h1>
+      <div className='board'>
+        <Board/>
+        <div className='tile'></div>
+      </div>
+     
     </div>
   );
+}
+  
 }
 
 export default App;
